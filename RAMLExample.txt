@@ -1,0 +1,51 @@
+#%RAML 0.8
+title: POL INR VOSTRO HUB initiation API
+baseUri: http://anypoint-if-dev.hk.hsbc/paymets-glcm/pol-vostro-hub-initiation/{version}
+version: v1
+
+traits:
+- common-header: !include traits/internal-technical-traits.raml
+- security-header: !include traits/e2e-trust-traits.raml
+schemas:
+- request-schema: !include schemas/pol-payments-initiation-request-pain001v3.xsd
+- response-schema: !include schemas/bespoke-response.xsd
+
+/payments:
+	displayName: payments-initiation
+	description: THIS API is used to initiate payment for HUB VOSTRO
+
+	post:
+		is: [common-header,security-header]
+		description: post payments to HUB
+		
+		body:
+			application/xml:
+				schema: reuest-schema
+				example: !include examples/initiation-request-example.xml
+		
+		responses:
+			200:
+				body:
+					applicaition/xml:
+						schema: response-schema
+						example: !include examples/success-example.xml
+						
+			500:
+				body:
+					applicaition/xml:
+						schema: response-schema
+						example: !include examples/error500-example.xml
+						
+						
+						
+
+
+
+headers:
+	X-HSBC-E2E-Trust-Token:
+		description: jo b krta hai
+		required: false
+		type: string
+		minLength: 1
+		example: "23wr25sfw45rfse"
+		

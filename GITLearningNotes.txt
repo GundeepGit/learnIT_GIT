@@ -1,0 +1,32 @@
+:::::Git Basics:::::
+
+All files in GIT can be in three different states:
+
+1. Modified
+2. Staged(Index)
+3.comitted (i.e. data is safely stored in local directory.
+
+GIT Configuration levels:
+1. System -- connfig applied to all users on a computer and all their repos
+2. Global -- config applied to all repos on a comp for current users
+3. Local -- config applied only to current repos
+
+
+git config --global user.name "Gundeep Singh"
+
+git init (To create an empty master branch)
+
+Files can exist in either of the 2 states -- Tracked or Untracked.
+
+Tracked: files that git is aware of i.e that were present in the last snapshot.
+Untracked: Files that were not present in the last snapshot they are present in the working directory.
+
+to add files in the staging area we need to use add command.
+
+eg: git add licence.txt reademe.md
+
+to check how many files are present in staging use :::
+
+git status
+
+

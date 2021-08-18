@@ -29,4 +29,8 @@ to check how many files are present in staging use :::
 
 git status
 
+rm -f .git/index.lock --- to delete the index.lock file and release the active lock.
+
+git status --help (to check for all the options of commands available).
+
 

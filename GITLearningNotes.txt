@@ -62,7 +62,7 @@ we can use TAB to auto complete file names
 git restore <filename> ----> to restore any changes made to a file.
 
 
-REMOTE REPO
+====REMOTE REPO====
 - GITHUB
 - BITBUCKET
 - GITLAB
@@ -80,3 +80,18 @@ git clone <PASTE THE URL>  ^^^
 
 
  git remote set-url git@github.com:GundeepGit/learnIT_GIT.git ----> to change our protocol from https to ssh
+
+=========BRANCHING======
+
+git branch <branch name> ----> to create a new branch
+
+git branch ---> to get all the branch we have in local repo
+
+git branch -r -----> to get all the remote branches
+
+git branch -a ----> to get both local and remote branches
+
+git switch <branch name>  OR git checkout <branch name> -----> to switch bw branches
+
+
+git ch

@@ -33,4 +33,50 @@ rm -f .git/index.lock --- to delete the index.lock file and release the active l
 
 git status --help (to check for all the options of commands available).
 
+git commit -a -m "new changes"    ---------->(to add and commit simultaneously if file modified)
 
+
+git rm --cached <flename> ------> if we do not want to track changes of a file anymore.
+
+git rm  -r --cached <directory name>/ ----> (-r is used for recursive) if we do not want to track changes of a directory and an files inside it anymore.
+
+touch <filename> ----- used to crate new files.
+
+touch .gitignore ---> used to create the gitignore file where we can tell git what files need to be ignored.
+
+nano <filename> ----> this can be used to edit a file.
+
+git log ----> used to check commit history. we can ablso add -<number> to get that many recent commits only.
+
+git log --pretty=oneline ----> this gives just the checksum and commit message
+
+git commit --amend ----> if you want to edit the last commit message.
+
+git commit --amend --no-edit ----> if you just want to commit a file with previour commit msg only then use this
+
+git restore --staged <filename>  ----> to remove a file from staging area that you have already tracked by add command.
+
+
+we can use TAB to auto complete file names
+
+git restore <filename> ----> to restore any changes made to a file.
+
+
+REMOTE REPO
+- GITHUB
+- BITBUCKET
+- GITLAB
+
+
+git remote -v -----> to check if the local repo is connected to any remote repo or not.
+
+git remote add origin https://github.com/GundeepGit/learnIT_GIT.git ----> to connect remote repo to local repo.
+
+git push origin -u master ---> this will push our changes of local to remote repo in master branch (-u is for upstream i.e. it will create a master in our remote repo for the first time).
+
+if we want to clone a repo in a particular location do a git bash there and then add the following command ::::
+
+git clone <PASTE THE URL>  ^^^
+
+
+ git remote set-url git@github.com:GundeepGit/learnIT_GIT.git ----> to change our protocol from https to ssh

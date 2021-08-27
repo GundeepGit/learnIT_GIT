@@ -94,4 +94,6 @@ git branch -a ----> to get both local and remote branches
 git switch <branch name>  OR git checkout <branch name> -----> to switch bw branches
 
 
-git ch
+git branch -d <branch name> ----> to delete a branch from local
+
+git push origin --delete <branch name> -----> to delete a branch from remote 
